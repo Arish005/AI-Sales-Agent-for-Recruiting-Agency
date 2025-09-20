@@ -6,17 +6,12 @@ from flask_cors import CORS
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
-# --- Configuration ---
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# --- Flask App Initialization ---
 app = Flask(__name__)
-CORS(app) # Enable Cross-Origin Resource Sharing
-
-# --- Database Setup ---
+CORS(app) 
 DB_NAME = "agent_memory.db"
 
 def get_db_connection():
@@ -46,13 +41,11 @@ def init_db():
     conn.commit()
     conn.close()
 
-# --- Gemini API Interaction ---
 def get_gemini_response(session_id, user_input):
     """
     Gets a response from the Gemini API based on conversation history.
     """
     
-    # CORRECTED SECTION START
     system_prompt_text = """You are a friendly and highly efficient sales assistant for a recruitment agency named "RecruitGenie". Your goal is to understand the client's hiring needs, extract key information, and recommend the most suitable hiring service.
 
     **Your personality:** Professional, helpful, and concise.
@@ -92,9 +85,7 @@ def get_gemini_response(session_id, user_input):
         model_name="gemini-1.5-flash",
         system_instruction=system_prompt_text
     )
-    # CORRECTED SECTION END
     
-    # Fetch conversation history from DB
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute(
@@ -107,7 +98,6 @@ def get_gemini_response(session_id, user_input):
 
     generation_config = {"response_mime_type": "application/json"}
     
-    # CORRECTED: The contents list no longer includes the system_instruction object
     contents = conversation_history + [{"role": "user", "parts": [{"text": user_input}]}]
 
     try:
@@ -122,7 +112,6 @@ def get_gemini_response(session_id, user_input):
         return fallback_response
 
 
-# --- API Endpoints ---
 @app.route('/chat', methods=['POST'])
 def chat():
     """Handles the main chat interaction."""
@@ -206,7 +195,6 @@ def get_data(session_id):
     return jsonify({})
 
 
-# --- Main Execution ---
 if __name__ == '__main__':
     init_db()
     app.run(host='0.0.0.0', port=5001, debug=True)
