@@ -57,6 +57,9 @@ This project is a fully functional, AI-powered sales agent designed for a recrui
 ### 5. Screenshots:
 <img width="1916" height="1035" alt="Screenshot 2025-09-20 164016" src="https://github.com/user-attachments/assets/179a3129-e635-44a6-9865-521f0ddde2e6" />
 
+<img width="1602" height="782" alt="log image" src="https://github.com/user-attachments/assets/fa782caf-acd1-456e-80c5-dd608e687231" />
+
+
 
 
     
