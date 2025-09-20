@@ -56,7 +56,9 @@ This project is a fully functional, AI-powered sales agent designed for a recrui
 
 ### 4. Screenshots:
 
-    Screenshot 2025-09-20 164016.png
+![AI Sales Agent UI](./assets/ui-screenshot.png)
+
+![Backend Log](./assets/log-image.png)
     
 
 
