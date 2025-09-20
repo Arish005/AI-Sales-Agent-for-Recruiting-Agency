@@ -55,8 +55,8 @@ This project is a fully functional, AI-powered sales agent designed for a recrui
     The application will open in your browser at `http://localhost:3000`.
 
 ### 5. Screenshots:
+<img width="1916" height="1035" alt="Screenshot 2025-09-20 164016" src="https://github.com/user-attachments/assets/179a3129-e635-44a6-9865-521f0ddde2e6" />
 
-https://github.com/Arish005/AI-Sales-Agent-for-Recruiting-Agency/blob/main/assets/Screenshot%202025-09-20%20164016.png
 
 
     
