@@ -59,6 +59,11 @@ This project is a fully functional, AI-powered sales agent designed for a recrui
 
 <img width="1602" height="782" alt="log image" src="https://github.com/user-attachments/assets/fa782caf-acd1-456e-80c5-dd608e687231" />
 
+### 6. Sample Video:
+
+https://github.com/user-attachments/assets/32b9c089-1be0-4d52-b8d3-febe5f8f8583
+
+
 
 
 
